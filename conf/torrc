@@ -1,0 +1,31 @@
+SOCKSPort 9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr KeepAliveIsolateSOCKSAuth PreferSOCKSNoAuth
+
+TransPort 9040
+VirtualAddrNetwork 172.30.0.0/16
+DNSPort 5353 IsolateDestAddr
+AutomapHostsOnResolve 1
+
+PidFile /var/run/tor/tor.pid
+AvoidDiskWrites 1
+LongLivedPorts 21, 22, 80, 443, 706, 1863, 5050, 5190, 5222, 5223, 6523, 6667, 6697, 8080, 8300, 9001, 9030
+
+ClientOnly 1
+StrictNodes 1
+UseEntryGuards 1
+UseEntryGuardsAsDirGuards 1
+NumEntryGuards 3
+ExcludeSingleHopRelays 1
+EnforceDistinctSubnets 1
+AllowSingleHopCircuits 0
+AllowSingleHopExits 0
+SafeSocks 1
+SafeLogging 1
+TestSocks 1
+WarnUnsafeSocks 1
+WarnPlaintextPorts 21,23,25,109,110,143,6667
+
+ExcludeNodes Unnamed,default,{ag},{bb},{bz},{bw},{bg},{dm},{gh},{gd},{gy},{jm},{ki},{mu},{me},{na},{nr},{pg},{kn},{lc},{vc},{ws},{sb},{so},{sr},{tz},{to},{tt},{tv},{??}
+ExcludeExitNodes Unnamed,default,{ag},{bb},{bz},{bw},{bg},{dm},{gh},{gd},{gy},{jm},{ki},{mu},{me},{na},{nr},{pg},{kn},{lc},{vc},{ws},{sb},{so},{sr},{tz},{to},{tt},{tv},{??}
+
+Log notice file /var/log/tor/notices.log
+DataDirectory /var/lib/tor
