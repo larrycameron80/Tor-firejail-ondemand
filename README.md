@@ -7,7 +7,7 @@ This has only been tested on Ubuntu 16.04.3 LTS. A `torrc` file is included in t
 - DNSPort
 - AutomapHostsOnResolve
 
-**Warning:** This is not guarunteed to securely route _all_ traffic through Tor. If this is your use-case, it is much better to run a live version of the [Tails](https://www.tails-boums.org) distribution.
+**Warning:** This is not guaranteed to securely route _all_ traffic through Tor. If this is your use-case, it is much better to run a live version of the [Tails](https://www.tails-boums.org) distribution.
   
 ## Requirements
 - [Tor](https://www.tor-project.org) - `apt install tor`
